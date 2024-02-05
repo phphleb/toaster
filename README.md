@@ -2,7 +2,7 @@
 
 [![HLEB2](https://img.shields.io/badge/HLEB-2-darkcyan)](https://github.com/phphleb/hleb) [![License: MIT](https://img.shields.io/badge/License-MIT%20(Free)-brightgreen.svg)](https://github.com/phphleb/hleb/blob/master/LICENSE)
 
-A template for local application development using the [HLEB2](https://github.com/phphleb/hleb) framework.
+A template for local development using the [HLEB2](https://github.com/phphleb/hleb) framework.
 
 ## Recipe
 
