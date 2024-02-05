@@ -14,6 +14,7 @@ RUN  apt update \
     nano \
   && curl -sS https://getcomposer.org/installer -o composer-setup.php \
   && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
+  && chmod +x /root/*.sh \
   && composer global require "friendsofphp/php-cs-fixer" \
   && pecl install xdebug \
   && docker-php-ext-enable xdebug \
