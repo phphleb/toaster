@@ -65,7 +65,7 @@ A template for local application development using the [HLEB2](https://github.co
 ## HLOGIN
 User authorization module.
 
-[About HLOGIN](https://phphleb.ru/ru/v1/authorization/)
+[About HLOGIN](https://github.com/phphleb/hlogin)
 
 Not installed by default, but can be easily added to your project.
 Connect to the `php` service container and execute `./add-hlogin.sh`.
