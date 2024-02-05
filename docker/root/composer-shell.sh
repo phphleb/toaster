@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cmd="/root/.composer/vendor/bin/composer"
+cmd="/usr/local/bin/composer"
 
 for i in $@
   do
