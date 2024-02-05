@@ -40,7 +40,6 @@ A template for local application development using the [HLEB2](https://github.co
 
   [About phpMyAdmin](https://www.phpmyadmin.net/)  
   Default [localhost:8080](http://localhost:8080).
-
   Authorization is automatic.
   If you are not satisfied with the port, change `PMA_EXTERNAL_PORT` in the `.env` file.
 </details>
@@ -51,7 +50,6 @@ A template for local application development using the [HLEB2](https://github.co
   [About Xdebug](https://xdebug.org/)  
   The configuration file is `docker/xdebug.ini`.
   The default port is `9003`.
-
   In `docker-compose.yml` the server is specified as `serverName`.
   Defaults to `serverName=toaster`.
 </details>
@@ -62,7 +60,6 @@ A template for local application development using the [HLEB2](https://github.co
   [About PHP CS Fixer](https://cs.symfony.com/)  
   The [configuration](https://cs.symfony.com/doc/config.html) from `docker/.php-cs-fixer.php` is copied to `/hleb`.
   Cheat sheet on the rules [here](https://mlocati.github.io/php-cs-fixer-configurator/#version:3.7).
-
   After creating a new project, it automatically edits files using rules.
 </details>
 
