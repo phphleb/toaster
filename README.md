@@ -23,7 +23,6 @@ A template for local application development using the [HLEB2](https://github.co
   <summary>Local server</summary>
 
   Default [localhost:5125](http://localhost:5125).
-
   If you are not satisfied with the port, change `SERVER_EXTERNAL_PORT` in the `.env` file.
 </details>
 
