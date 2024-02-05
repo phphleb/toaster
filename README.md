@@ -1,80 +1,81 @@
-# Тостер
+# Toaster
 
-Заготовка для разработки приложения
-на [микрофреймворке HLEB](https://github.com/phphleb/hleb)
-(приготовления хлеба)
+[![HLEB2](https://img.shields.io/badge/HLEB-2-darkcyan)](https://github.com/phphleb/hleb) [![License: MIT](https://img.shields.io/badge/License-MIT%20(Free)-brightgreen.svg)](https://github.com/phphleb/hleb/blob/master/LICENSE)
 
-[Сайт](https://phphleb.ru) хлеба
-и [инструкция](https://phphleb.ru/ru/v1/) по приготовлению
+A template for local application development using the [HLEB2](https://github.com/phphleb/hleb) framework.
 
-## Для запуска потребуется
+## Recipe
 
 - [Docker](https://www.docker.com)
-- этот репозиторий
+- this repository
 - `docker-compose up -d`
 
-## Вы получите
+## Composition
 
 <details>
-  <summary>Свежий хлеб</summary>
+  <summary>Development repository</summary>
 
-  После запуска контейнеров в корне проекта будет создана директория `hleb`
-  со свежим проектом [phphleb](https://packagist.org/packages/phphleb/hleb)
+  After launching the containers, the `hleb` directory will be created in the root of the project
+  with the new [HLEB2](https://packagist.org/packages/phphleb/hleb) project.
 </details>
 
 <details>
-  <summary>Локальный сервер</summary>
+  <summary>Local server</summary>
 
-  По умолчанию [localhost:5125](http://localhost:5125).
-  Если не устраивает порт, измените `SERVER_EXTERNAL_PORT` в файле `.env`
+  Default [localhost:5125](http://localhost:5125).
+
+  If you are not satisfied with the port, change `SERVER_EXTERNAL_PORT` in the `.env` file.
 </details>
 
 <details>
   <summary>MariaDB</summary>
 
-  [Что это?](https://mariadb.org/)  
-  В свежем проекте `hleb` автоматически будет создан файл
-  `./database/dbase.config.php` с конфигурацией подключения к СУБД.
-  Можно сразу пользоваться!
+  [About MariaDB](https://mariadb.org/)  
+  In the new project `hleb` the file will be automatically created
+  `/config/database-local.php` with the configuration for connecting to the DBMS.
 </details>
 
 <details>
   <summary>phpMyAdmin</summary>
 
-  [Что это?](https://www.phpmyadmin.net/)  
-  По умолчанию [localhost:8080](http://localhost:8080).
-  Авторизация автоматическая.
-  Если не устраивает порт, измените `PMA_EXTERNAL_PORT` в файле `.env`
+  [About phpMyAdmin](https://www.phpmyadmin.net/)  
+  Default [localhost:8080](http://localhost:8080).
+
+  Authorization is automatic.
+  If you are not satisfied with the port, change `PMA_EXTERNAL_PORT` in the `.env` file.
 </details>
 
 <details>
   <summary>Xdebug</summary>
 
-  [Что это?](https://xdebug.org/)  
-  Конфигурационный файл — `docker/xdebug.ini`.
-  По умолчанию порт `9003`. В `docker-compose.yml` задаём `serverName`.
-  По умолчанию `serverName=toaster`
+  [About Xdebug](https://xdebug.org/)  
+  The configuration file is `docker/xdebug.ini`.
+  The default port is `9003`.
+
+  In `docker-compose.yml` the server is specified as `serverName`.
+  Defaults to `serverName=toaster`.
 </details>
 
 <details>
   <summary>PHP Coding Standards Fixer</summary>
 
-  [Что это?](https://cs.symfony.com/)  
-  [Конфигурация](https://cs.symfony.com/doc/config.html)
-  из `docker/.php-cs-fixer.php` копируется в `/hleb`.
-  Шпаргалка по правилам
-  [здесь](https://mlocati.github.io/php-cs-fixer-configurator/#version:3.7).
-  После создания свежего проекта автоматически редактирует файлы
-  с применением правил (поджаривает хлеб)
+  [About PHP CS Fixer](https://cs.symfony.com/)  
+  The [configuration](https://cs.symfony.com/doc/config.html) from `docker/.php-cs-fixer.php` is copied to `/hleb`.
+  Cheat sheet on the rules [here](https://mlocati.github.io/php-cs-fixer-configurator/#version:3.7).
+
+  After creating a new project, it automatically edits files using rules.
 </details>
 
 ## HLOGIN
-[Что это?](https://phphleb.ru/ru/v1/authorization/)
+User authorization module.
 
-Не установлен по умолчанию, но можно легко добавить в свой проект.
-Подключитесь к контейнеру сервиса `php` и выполните `./add-hlogin.sh`.
-По ходу установки придётся ответить на три вопроса от системы:
+[About HLOGIN](https://phphleb.ru/ru/v1/authorization/)
 
-1. Предпочитаемый стиль интерфейса
-2. Email администратора
-3. Пароль администратора
+Not installed by default, but can be easily added to your project.
+Connect to the `php` service container and execute `./add-hlogin.sh`.
+
+During installation, you will need to answer three questions from the system:
+
+1. Preferred interface style.
+2. Administrator's email.
+3. Administrator password.
