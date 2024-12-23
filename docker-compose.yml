@@ -20,6 +20,7 @@ services:
       - .env
     volumes:
       - ./hleb:/hleb
+      - ./log:/log
       - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini:ro
 
   db:

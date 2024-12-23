@@ -1,5 +1,4 @@
 <?php
-if (file_exists(__DIR__ . '/database-local.php')) { return (require __DIR__ . '/database-local.php');}
 
 return [
     'base.db.type' => 'mariadb',
@@ -8,11 +7,11 @@ return [
 
         'mariadb' => [
             'mysql:host=db',
-            'port=3306',
-            'dbname=MYSQL_DATABASE',
+            'port=' . get_env('DATABASE_EXTERNAL_PORT', ''),
+            'dbname=' . get_env('MYSQL_DATABASE', ''),
             'charset=utf8',
-            'user' => 'MYSQL_USER',
-            'pass' => 'MYSQL_PASSWORD',
+            'user' => get_env('MYSQL_USER', ''),
+            'pass' => get_env('MYSQL_PASSWORD', ''),
         ],
     ]
 ];
